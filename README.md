@@ -80,3 +80,12 @@ mencionadas, NO se calificará el proyecto; por lo cual, se tendrá una nota
 de cero puntos. 
 • Fecha de entrega: 27 de diciembre de 2024, antes de las 23:59, no se 
 recibirán entregas después de la fecha y hora establecida.
+
+### Gramatica libre de contexto
+
+<Operaciones> ::= <Operacion> | <Operacion> <Operaciones>
+<Operacion> ::= IDENTIFICADOR '=' <Expresion>
+<Expresion> ::= <Termino> | <Termino> '+' <Expresion> | <Termino> '-' <Expresion>
+<Termino> ::= <Factor> | <Factor> '*' <Termino> | <Factor> '/' <Termino>
+<Factor> ::= NUMERO | IDENTIFICADOR | '(' <Expresion> ')' | FUNCION '(' <Expresion> ')'
+<FUNCION> ::= "suma" | "resta" | "multiplicacion" | "division" | "potencia" | "raiz" | ...

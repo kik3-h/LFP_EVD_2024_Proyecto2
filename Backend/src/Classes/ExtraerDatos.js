@@ -1,6 +1,6 @@
 const fs = require('fs');
-
-class ExtraerDatos {
+const CrearGraficas = require('./CrearGraficas');
+class ExtraerDatos { // Clase para extraer datos de un archivo de configuración de NodeLex (archivo .nlex) 
     constructor(rutaArchivo) {
         this.rutaArchivo = rutaArchivo;
     }
@@ -14,20 +14,20 @@ class ExtraerDatos {
         let openBrackets = 0;
 
         // Buscar el final de la sección con soporte para anidamientos
-        for (let i = startIndex + inicio.length; i < contenido.length; i++) {
-            if (contenido[i] === '[') openBrackets++;
-            if (contenido[i] === ']') {
-                if (openBrackets === 0) {
-                    endIndex = i;
-                    break;
+        for (let i = startIndex + inicio.length; i < contenido.length; i++) { // Recorrer el contenido desde el inicio de la sección
+            if (contenido[i] === '[') openBrackets++; // Aumentar contador de corchetes abiertos
+            if (contenido[i] === ']') { // Si se encuentra un corchete cerrado 
+                if (openBrackets === 0) { // Si no hay corchetes abiertos
+                    endIndex = i; // Se encontró el cierre de la sección
+                    break; // Salir del ciclo
                 }
-                openBrackets--;
+                openBrackets--; // Disminuir contador de corchetes abiertos
             }
         }
 
         if (endIndex === -1) return null; // No se encontró el cierre correspondiente
 
-        return contenido.substring(startIndex + inicio.length, endIndex + 1).trim();
+        return contenido.substring(startIndex + inicio.length, endIndex + 1).trim(); // Extraer la sección y limpiarla de espacios
     }
 
     // Método para limpiar el texto JSON

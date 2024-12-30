@@ -179,7 +179,7 @@ class Resultados{
                                 text-align: left;
                             }
                             th {
-                                background-color:rgb(182, 245, 9);
+                                background-color:rgb(196, 247, 57);
                             }
                         </style>
                     </head>
@@ -216,7 +216,7 @@ class Resultados{
                         text-align: left;
                     }
                     th {
-                        background-color:rgb(34, 235, 27);
+                        background-color:rgb(31, 235, 24);
                     }
                 </style>
             </head>

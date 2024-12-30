@@ -9,7 +9,6 @@ export default function Component() {
   const [erroresSintacticos, setErroresSintacticos] = useState([]);
   const [erroresLexicos, setErroresLexicos] = useState([]);
 
-
   const analizarTexto = async () => { // Función para analizar el texto ingresado
     try {
         // Enviar el texto al servidor para análisis y generación de HTML
@@ -112,20 +111,19 @@ export default function Component() {
       </div>
       <div className="botones-container">
         <button className="btn-analizar" onClick={analizarTexto}>
-          Vamos Analizar tu Código UwU
-        </button>
-        
-        <button className="btn-cargar" onClick={cargarTexto}>
-          Cargar tu Archivo :v
-        </button>
-        <button className="btn-guardar" onClick={guardar}>
-          Guardar tu archivo :3
-        </button>
-        <button className="btn-guardar" onClick={guardarComo}>
-          Guardar Como tu desees el archivo 
+          Analizar Código
         </button>
         <button className="btn-limpiar" onClick={limpiarTexto}>
-          Limpiar Todo alv
+          Limpiar
+        </button>
+        <button className="btn-cargar" onClick={cargarTexto}>
+          Cargar Archivo
+        </button>
+        <button className="btn-guardar" onClick={guardar}>
+          Guardar
+        </button>
+        <button className="btn-guardar" onClick={guardarComo}>
+          Guardar Como
         </button>
 
       </div>
@@ -135,13 +133,11 @@ export default function Component() {
         <table className="tabla-resultados">
           <thead>
             <tr>
-              
               <th>Tipo</th>
               <th>Lexema</th>
               <th>Fila</th>
               <th>Columna</th>
               <th>Descripción</th>
-              
             </tr>
           </thead>
           <tbody>

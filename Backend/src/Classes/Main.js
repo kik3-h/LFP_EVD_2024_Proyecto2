@@ -42,12 +42,12 @@ app.post('/analizar-html', (req, res) => {
         });
         html += `</ul><h1>Errores sintacticos</h1><ul>`;
         errores.forEach((errores) => {
-            html += `<li>${index + 1}|${errores.tipo} | ${errores.lexema} | ${errores.fila} | ${errores.columna} | ${errores.descripcion}</li>`;
+            html += `<li>${errores.tipo} | ${errores.lexema} | ${errores.fila} | ${errores.columna} | ${errores.descripcion}</li>`;
         });
         html += `</ul></body></html>`;
         html += `<h1>Errores Lexicos</h1><ul>`;
         erroresLexicos.forEach((erroresLexicos) => {
-            html += `<li>${index + 1}|${erroresLexicos.tipo} | ${erroresLexicos.lexema} | ${erroresLexicos.fila} | ${erroresLexicos.columna} | ${erroresLexicos.descripcion}</li>`;
+            html += `<li>${erroresLexicos.tipo} | ${erroresLexicos.lexema} | ${erroresLexicos.fila} | ${erroresLexicos.columna} | ${erroresLexicos.descripcion}</li>`;
         });
         html += `</ul></body></html>`;
 

@@ -195,13 +195,16 @@ class AnalizadorSintactico{
             try {
                 // Extraer los datos
                 const { operaciones, configuracionesLex, configuracionesParser } = extraer.extraerDatos();
-        
+                
                 // Verificar si los datos son válidos
                 if (!operaciones || !configuracionesLex || !configuracionesParser) {
                     console.warn("Operaciones o configuraciones no válidas. Se omite la creación de imágenes.");
                     return;
                 }
-        
+                console.log("Operaciones:", operaciones);
+                console.log("Configuraciones Lex:", configuracionesLex);
+                console.log("Configuraciones Parser:", configuracionesParser);
+                
                 const creadorGrafica = new CrearGraficas(operaciones, configuracionesLex);
                 guardarNombre = guardarNombre.substring(1, guardarNombre.length - 1);
         
@@ -209,7 +212,7 @@ class AnalizadorSintactico{
                 let pngname = guardarNombre + ".png";
                 creadorGrafica.generarImagen(dotname, pngname);
         ////////////////////////7
-                const creadorGraficaArbol = new CrearArbol(this.Token, configuracionesParser);
+                 const creadorGraficaArbol = new CrearArbol(this.Token, configuracionesParser);
                 let dotnameArbol = 'ArbolCreado.dot';
                 let pngnameArbol = 'ArbolCreado.png';
                 creadorGraficaArbol.generarArbolBNF(dotnameArbol); // Crear archivo DOT

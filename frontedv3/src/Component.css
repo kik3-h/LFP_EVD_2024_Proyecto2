@@ -1,6 +1,7 @@
  /* Contenedor principal */
  .titulo-container {
     background-image: url('/public/fondo.svg'); /* Ruta de tu imagen de mi fondo del Barca jajs*/
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -73,7 +74,7 @@
   /* Botones */
   .btn-analizar, .btn-cargar, .btn-guardar, .btn-guardarComo,
   .btn-limpiar {
-    background-color: #6884a1;
+    background-color: #6687aa;
     color: #000000;
     border: none;
     padding: 15px 25px;
@@ -119,4 +120,4 @@
 .tabla-resultados tr:nth-child(even) {
   background-color: #6933a7;
 }
-  
+

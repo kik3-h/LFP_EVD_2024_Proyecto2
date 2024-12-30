@@ -1,6 +1,6 @@
 digraph Operaciones {
-  graph [bgcolor="#000000"];
-  node [shape=circle, style=filled, fillcolor="#000000", fontcolor="#FFFFFF", fontname="Times-Roman"];
+  graph [bgcolor="#ffffff"];
+  node [shape=ellipse, style=filled, fillcolor="#ffffff", fontcolor="#000000", fontname="Arial"];
   n1 [label="resta operacion1"];
   n2 [label="20.5"];
   n1 -> n2;

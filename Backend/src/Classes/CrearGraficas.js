@@ -3,19 +3,27 @@ const { exec } = require('child_process');
 
 class CrearGrafica {
     constructor(datosOperaciones, datosConfiguracionesLex) {
-        // Extraer las claves necesarias
         this.operaciones = datosOperaciones.operaciones || [];
-        this.configuracionesLex = (datosConfiguracionesLex.configuaracionesLex || [])[0] || {};
+        this.configuracionesLex = datosConfiguracionesLex && datosConfiguracionesLex[0] 
+            ? { // Aplicar configuracionesLex si existen en el archivo de configuración de NodeLex sino xd
+                fondo: datosConfiguracionesLex[0].fondo || "#ffffff",
+                fuente: datosConfiguracionesLex[0].fuente || "#000000",
+                forma: datosConfiguracionesLex[0].forma || "ellipse",
+                tipoFuente: datosConfiguracionesLex[0].tipoFuente || "Arial",
+            }
+            : {
+                fondo: "#ffffff",
+                fuente: "#000000",
+                forma: "ellipse",
+                tipoFuente: "Arial",
+            };
     }
     
     generarDot() {
         let dot = `digraph Operaciones {\n`;
 
-        // Aplicar configuracionesLex
-        const fondo = this.configuracionesLex.fondo || "#ffffff";
-        const fuente = this.configuracionesLex.fuente || "#000000";
-        const forma = this.configuracionesLex.forma || "ellipse";
-        const tipoFuente = this.configuracionesLex.tipoFuente || "Arial";
+         // Aplicar configuracionesLex
+        const { fondo, fuente, forma, tipoFuente } = this.configuracionesLex;
 
         dot += `  graph [bgcolor="${fondo}"];\n`;
         dot += `  node [shape=${forma}, style=filled, fillcolor="${fondo}", fontcolor="${fuente}", fontname="${tipoFuente}"];\n`;

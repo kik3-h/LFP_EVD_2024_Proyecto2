@@ -22,7 +22,122 @@
             <body>
                 <h1>Proyecto 2</h1>
                 <h1>Tabla de Errores</h1>
-                <p>No hay errores Lexicos para mostrar.</p>
+                
+                <table border="1" style="border-collapse: collapse; width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>Nº</th>
+                            <th>Tipo</th>
+                            <th>Lexema</th>
+                            <th>Descripción</th>
+                            <th>Fila</th>
+                            <th>Columna</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                    <tr>
+                        <td>1</td>
+                        <td>ERROR_LEXICO</td>
+                        <td>$</td>
+                        <td>Caracter no reconocido</td>
+                        <td>179</td>
+                        <td>2</td>
+                    </tr>
+                
+                    <tr>
+                        <td>2</td>
+                        <td>ERROR_LEXICO</td>
+                        <td>/</td>
+                        <td>Caracter no reconocido</td>
+                        <td>183</td>
+                        <td>2</td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td>ERROR_LEXICO</td>
+                        <td>Si</td>
+                        <td>Palabra no reconocida</td>
+                        <td>183</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>4</td>
+                        <td>ERROR_LEXICO</td>
+                        <td>te</td>
+                        <td>Palabra no reconocida</td>
+                        <td>183</td>
+                        <td>8</td>
+                    </tr>
+                
+                    <tr>
+                        <td>5</td>
+                        <td>ERROR_LEXICO</td>
+                        <td>jalan</td>
+                        <td>Palabra no reconocida</td>
+                        <td>183</td>
+                        <td>12</td>
+                    </tr>
+                
+                    <tr>
+                        <td>6</td>
+                        <td>ERROR_LEXICO</td>
+                        <td>las</td>
+                        <td>Palabra no reconocida</td>
+                        <td>183</td>
+                        <td>19</td>
+                    </tr>
+                
+                    <tr>
+                        <td>7</td>
+                        <td>ERROR_LEXICO</td>
+                        <td>operaciones</td>
+                        <td>Palabra no reconocida</td>
+                        <td>183</td>
+                        <td>24</td>
+                    </tr>
+                
+                    <tr>
+                        <td>8</td>
+                        <td>ERROR_LEXICO</td>
+                        <td>ya</td>
+                        <td>Palabra no reconocida</td>
+                        <td>183</td>
+                        <td>38</td>
+                    </tr>
+                
+                    <tr>
+                        <td>9</td>
+                        <td>ERROR_LEXICO</td>
+                        <td>ganaste</td>
+                        <td>Palabra no reconocida</td>
+                        <td>183</td>
+                        <td>42</td>
+                    </tr>
+                
+                    <tr>
+                        <td>10</td>
+                        <td>ERROR_LEXICO</td>
+                        <td>LFP</td>
+                        <td>Palabra no reconocida</td>
+                        <td>183</td>
+                        <td>51</td>
+                    </tr>
+                
+                    <tr>
+                        <td>11</td>
+                        <td>ERROR_LEXICO</td>
+                        <td>Configuraci0nesLex</td>
+                        <td>Palabra no reconocida</td>
+                        <td>185</td>
+                        <td>3</td>
+                    </tr>
+                
+                    </tbody>
+                </table>
+            
                 <h1>Tabla de Errores Sintacticos</h1>
                 
             <table border="1" style="border-collapse: collapse; width: 100%;">
@@ -41,10 +156,55 @@
                 <tr>
                     <td>1</td>
                     <td>ERROR_SINTACTICO</td>
-                    <td>]</td>
+                    <td>""</td>
                     <td>Se esperaba COMA</td>
-                    <td>179</td>
+                    <td>45</td>
+                    <td>22</td>
+                </tr>
+            
+                <tr>
                     <td>2</td>
+                    <td>ERROR_SINTACTICO</td>
+                    <td>""</td>
+                    <td>Se esperaba NOMBRE</td>
+                    <td>45</td>
+                    <td>22</td>
+                </tr>
+            
+                <tr>
+                    <td>3</td>
+                    <td>ERROR_SINTACTICO</td>
+                    <td>""</td>
+                    <td>Se esperaba DOS_PUNTOS</td>
+                    <td>45</td>
+                    <td>22</td>
+                </tr>
+            
+                <tr>
+                    <td>4</td>
+                    <td>ERROR_SINTACTICO</td>
+                    <td>"nombre"</td>
+                    <td>Se esperaba LLAVE_CIERRA</td>
+                    <td>46</td>
+                    <td>9</td>
+                </tr>
+            
+                <tr>
+                    <td>5</td>
+                    <td>ERROR_SINTACTICO</td>
+                    <td>"nombre"</td>
+                    <td>Se esperaba COMA</td>
+                    <td>46</td>
+                    <td>9</td>
+                </tr>
+            
+                <tr>
+                    <td>6</td>
+                    <td>ERROR_SINTACTICO</td>
+                    <td>"nombre"</td>
+                    <td>Se esperaba CORCHETE_CIERRA</td>
+                    <td>46</td>
+                    <td>9</td>
                 </tr>
             
                 </tbody>

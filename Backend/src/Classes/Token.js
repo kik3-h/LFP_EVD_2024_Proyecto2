@@ -27,6 +27,9 @@ class Token {
     getDescripcion() {
         return this.descripcion;
     }
+    getLexema() {
+        return this.lexema;
+    }
 }
 
 module.exports = Token;

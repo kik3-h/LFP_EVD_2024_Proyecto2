@@ -37,17 +37,17 @@ app.post('/analizar-html', (req, res) => {
         let html = `<html><head><title>Resultados</title></head><body>`;
         html += `<h1>Tokens</h1><ul>`;
         html += `<h2>TIPO | LEXEMA | FILA | COLUMNA | DESCRIPCION</h2><ul>`;
-        tokens.forEach((tokens) => {
-            html += `<li>${tokens.tipo} | ${tokens.lexema} | ${tokens.fila} | ${tokens.columna} | ${tokens.descripcion}</li>`;
+        tokens.forEach((tokens, index) => {
+            html += `<li>${index + 1}| ${tokens.tipo} | ${tokens.lexema} | ${tokens.fila} | ${tokens.columna} | ${tokens.descripcion}</li>`;
         });
         html += `</ul><h1>Errores sintacticos</h1><ul>`;
-        errores.forEach((error) => {
-            html += `<li>${error.tipo} | ${error.lexema} | ${error.fila} | ${error.columna} | ${error.descripcion}</li>`;
+        errores.forEach((errores) => {
+            html += `<li>${index + 1}|${errores.tipo} | ${errores.lexema} | ${errores.fila} | ${errores.columna} | ${errores.descripcion}</li>`;
         });
         html += `</ul></body></html>`;
         html += `<h1>Errores Lexicos</h1><ul>`;
         erroresLexicos.forEach((erroresLexicos) => {
-            html += `<li>${erroresLexicos.tipo} | ${erroresLexicos.lexema} | ${erroresLexicos.fila} | ${erroresLexicos.columna} | ${erroresLexicos.descripcion}</li>`;
+            html += `<li>${index + 1}|${erroresLexicos.tipo} | ${erroresLexicos.lexema} | ${erroresLexicos.fila} | ${erroresLexicos.columna} | ${erroresLexicos.descripcion}</li>`;
         });
         html += `</ul></body></html>`;
 

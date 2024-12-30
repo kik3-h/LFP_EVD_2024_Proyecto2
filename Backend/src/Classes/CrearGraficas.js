@@ -12,7 +12,7 @@ class CrearGrafica {
         let dot = `digraph Operaciones {\n`;
 
         // Aplicar configuracionesLex
-        const fondo = this.configuracionesLex.fondo || "#FFFFFF";
+        const fondo = this.configuracionesLex.fondo || "#ffffff";
         const fuente = this.configuracionesLex.fuente || "#000000";
         const forma = this.configuracionesLex.forma || "ellipse";
         const tipoFuente = this.configuracionesLex.tipoFuente || "Arial";

@@ -42,7 +42,7 @@ class Resultados{
             <table border="1" style="border-collapse: collapse; width: 100%;">
                 <thead>
                     <tr>
-                        <th>Nº</th>
+                        <th>Numero</th>
                         <th>Tipo</th>
                         <th>Lexema</th>
                         <th>Fila</th>
@@ -179,7 +179,7 @@ class Resultados{
                                 text-align: left;
                             }
                             th {
-                                background-color:rgb(115, 176, 170);
+                                background-color:rgb(182, 245, 9);
                             }
                         </style>
                     </head>
@@ -216,7 +216,7 @@ class Resultados{
                         text-align: left;
                     }
                     th {
-                        background-color:rgb(123, 18, 18);
+                        background-color:rgb(34, 235, 27);
                     }
                 </style>
             </head>

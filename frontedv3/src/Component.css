@@ -1,0 +1,122 @@
+ /* Contenedor principal */
+ .titulo-container {
+    background-image: url('/public/fondo.svg'); /* Ruta de tu imagen de mi fondo del Barca jajs*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    gap: 25px;
+    background-color: #1e1e1e;
+    color: #fff;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Título principal */
+  .titulo {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Contenedor de los editores */
+  .editor-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+  }
+  
+  /* Áreas de texto */
+  .texto-editable,
+  .texto-no-editable {
+    flex: 1;
+    min-width: 450px;
+    max-width: 60%;
+    width: 600px;
+    height: 450px;
+    resize: both;
+    border: 1px solid #6933a7;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+  }
+  
+  .texto-editable {
+    background-color: #0000003a;
+    color: #ffffff;
+  }
+  
+  .texto-no-editable {
+    background-color: #0000003a;
+    color: #ffffff;
+  }
+  
+  /* Contenedor de botones */
+  .botones-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Botones */
+  .btn-analizar, .btn-cargar, .btn-guardar, .btn-guardarComo,
+  .btn-limpiar {
+    background-color: #6884a1;
+    color: #000000;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-analizar:hover, .btn-cargar:hover, .btn-guardar:hover, .btn-guardarComo:hover,
+  .btn-limpiar:hover {
+    background-color: #f3214e;
+  }
+
+  /* Nueva animación para destacar líneas */
+@keyframes moveLines {
+  0% {
+    transform: translateY(1);
+  }
+  100% {
+    transform: translateY(1080px);
+  }
+}
+
+.tabla-resultados {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-resultados th,
+.tabla-resultados td {
+  border: 1px solid #6933a7;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.tabla-resultados th {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.tabla-resultados tr:nth-child(even) {
+  background-color: #6933a7;
+}
+  

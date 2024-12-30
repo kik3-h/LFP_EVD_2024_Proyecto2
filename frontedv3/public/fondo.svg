@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="blaugrana-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#A50044" />
+      <stop offset="100%" stop-color="#004D98" />
+    </linearGradient>
+    <mask id="moving-lines-mask">
+      <rect width="100%" height="100%" fill="white" />
+      <g>
+        <!-- Líneas horizontales -->
+        <line x1="0" y1="50" x2="1920" y2="50" stroke="black" stroke-width="10">
+          <animate attributeName="y1" from="50" to="1130" dur="10s" repeatCount="indefinite" />
+          <animate attributeName="y2" from="50" to="1130" dur="10s" repeatCount="indefinite" />
+        </line>
+        <line x1="0" y1="150" x2="1920" y2="150" stroke="black" stroke-width="10">
+          <animate attributeName="y1" from="150" to="1230" dur="10s" repeatCount="indefinite" />
+          <animate attributeName="y2" from="150" to="1230" dur="10s" repeatCount="indefinite" />
+        </line>
+
+        <!-- Líneas verticales -->
+        <line x1="100" y1="0" x2="100" y2="1080" stroke="black" stroke-width="10">
+          <animate attributeName="x1" from="100" to="1820" dur="12s" repeatCount="indefinite" />
+          <animate attributeName="x2" from="100" to="1820" dur="12s" repeatCount="indefinite" />
+        </line>
+        <line x1="200" y1="0" x2="200" y2="1080" stroke="black" stroke-width="10">
+          <animate attributeName="x1" from="200" to="1920" dur="12s" repeatCount="indefinite" />
+          <animate attributeName="x2" from="200" to="1920" dur="12s" repeatCount="indefinite" />
+        </line>
+      </g>
+    </mask>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#blaugrana-gradient)" />
+  <rect width="1920" height="1080" fill="#000" mask="url(#moving-lines-mask)" opacity="0.2" />
+</svg>

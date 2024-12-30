@@ -1,4 +1,4 @@
-// LexicalAnalyzer.js
+// LexicalAnalyzer.js nuevooo modificado y mejorado de kike
 const Token = require('./Token.js');
 const Error = require('./Error.js');
 const e = require('express');
@@ -6,10 +6,10 @@ const e = require('express');
 class AnalizadorLexico{
     constructor(entrada){
 
-        this.tokens = [];
+        this.tokens = []; // obtengo tokens
         this.Token = [];
         this.errores = [];
-        this.entrada = entrada;
+        this.entrada = entrada; 
         this.estado = 0;
         this.token = "";
         this.fila = 1;
@@ -36,7 +36,7 @@ class AnalizadorLexico{
 
     }
 
-    PALABRAS_RESERVADAS = {
+    PALABRAS_RESERVADAS = { // 
         '"operacion"': "OPERACION",
         '"nombre"': "NOMBRE",
         '"valor1"': "VARIABLE",
@@ -86,11 +86,11 @@ class AnalizadorLexico{
 
     extraerConfiguraciones(texto) {
         try {
-            const jsonData = JSON.parse(texto); // Parsear el archivo JSON
+            const jsonData = JSON.parse(texto); // Parsear el archivo JSON para obtener las configuraciones
 
-            // Verificar si hay configuraciones
-            if (jsonData.configuraciones && Array.isArray(jsonData.configuraciones)) {
-                const config = jsonData.configuraciones[0];
+            // Verificar si hay configuraciones  y si es un arreglo
+            if (jsonData.configuraciones && Array.isArray(jsonData.configuraciones)) { // Verificar si hay configuraciones
+                const config = jsonData.configuraciones[0]; // Obtener la primera configuración
                 this.configuraciones = {
                     fondo: config.fondo || "default",
                     fuente: config.fuente || "default",
@@ -189,8 +189,8 @@ class AnalizadorLexico{
                         buffer += char;
 
                     } else {
-                        if (this.PALABRAS_RESERVADAS[buffer]) {
-                            this.Token.push(new Token(this.identificarToken(buffer), buffer, fila, columna - buffer.length + 1,'Palabra reservada'));
+                        if (this.PALABRAS_RESERVADAS[buffer]) { // Verifica si la palabra es una palabra reservada
+                            this.Token.push(new Token(this.identificarToken(buffer), buffer, fila, columna - buffer.length + 1,'Palabra reservada')); // Agrega la palabra reservada
                         } else {
                             this.Token.push(new Error(this.identificarToken(buffer), buffer, fila, columna - buffer.length + 1,'Palabra no reconocida'));
                         }
@@ -209,7 +209,7 @@ class AnalizadorLexico{
         // Procesa cualquier token pendiente al final del texto
         if (buffer) {
             if (estado === 'numero') {
-                this.Token.push(new Token(this.identificarToken(buffer), parseFloat(buffer), fila, columna - buffer.length + 1,'Numero'));
+                this.Token.push(new Token(this.identificarToken(buffer), parseFloat(buffer), fila, columna - buffer.length + 1,'Numero')); // Agrega el número al final del texto
             } else if (estado === 'cadena') {
                 throw new Error(`Cadena sin cerrar al final del texto en la fila ${fila}`);
             }
@@ -244,15 +244,12 @@ class AnalizadorLexico{
     }
 
     imprimirTablaTokens() {
-        if (this.Token.length === 0) {
-            console.log("No hay tokens para mostrar.");
+        if (this.Token.length === 0) { // Verifica si hay tokens para mostrar
+            console.log("No hay tokens para mostrar."); // Muestra un mensaje si no hay tokens
             return;
         }
     
         console.log("\n--- TABLA DE TOKENS ---");
-        console.log("-----------------------------------------------------------------");
-        console.log("| #   | Tipo               | Valor             | Fila   | Columna  |");
-        console.log("-----------------------------------------------------------------");
     
         this.Token.forEach((token, index) => {
             const numero = (index + 1).toString().padEnd(3, ' ');
@@ -273,9 +270,6 @@ class AnalizadorLexico{
         }
     
         console.log("\n--- TABLA DE ERRORES ---");
-        console.log("-----------------------------------------------------------------");
-        console.log("| #   | Descripción         | Valor             | Fila   | Columna  |");
-        console.log("-----------------------------------------------------------------");
     
         this.errores.forEach((error, index) => {
             const numero = (index + 1).toString().padEnd(3, ' ');

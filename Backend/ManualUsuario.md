@@ -52,6 +52,9 @@ Haz clic en el botón "Cargar tu Código a NodeLex".
 Selecciona un archivo .nlex desde tu sistema.
 
 El contenido del archivo aparecerá en el editor izquierdo.
+
+![MAIN](/Backend/src/Imagenes/11.png "Cargar Archivo")
+![MAIN](/Backend/src/Imagenes/12.png "Cargar Archivo")
  
 ### Paso 3: Analizar el Código
 
@@ -60,12 +63,21 @@ Escribe o edita el código en el área de texto.
 Haz clic en "Analizar el Código nuevo UwU".
 
 Los resultados aparecerán en el área derecha, mostrando tokens y errores.
+![MAIN](/Backend/src/Imagenes/13.png "Analizar Archivo")
+![MAIN](/Backend/src/Imagenes/14.png "Analizar Archivo")
 
 ### Paso 4: Guardar el Código
 
 Para guardar los cambios realizados, haz clic en "Guardar el Código".
 
+
+
+![MAIN](/Backend/src/Imagenes/15.png "Guardar Archivo")
+
+### Guardar como
 Usa "Guardar Como" para definir una extensión personalizada.
+![MAIN](/Backend/src/Imagenes/16.png "Guardar Archivo Como")
+![MAIN](/Backend/src/Imagenes/17.png "Guardar Archivo como correctamente")
 
 ## Características Principales
 
@@ -108,3 +120,5 @@ Correo Electrónico: enrinandez51@gmail.com
 Instagram: kik3.h
 
 MessiLover y F1Lover :3
+
+![random](/Backend/src/Imagenes/descargaBarca.png "jiji")

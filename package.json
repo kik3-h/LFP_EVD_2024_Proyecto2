@@ -4,8 +4,8 @@
   "main": "main.js",
   "author": "Enrique Hernandez",
   "license": "ISC",
-
   "dependencies": {
+    "@angular/common": "^19.0.5",
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "fs": "^0.0.1-security",

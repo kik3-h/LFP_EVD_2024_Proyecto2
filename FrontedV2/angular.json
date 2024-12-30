@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Fronted": {
+    "FrontedV2": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/fronted",
+            "outputPath": "dist/fronted-v2",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Fronted:build:production"
+              "buildTarget": "FrontedV2:build:production"
             },
             "development": {
-              "buildTarget": "Fronted:build:development"
+              "buildTarget": "FrontedV2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -105,6 +105,6 @@
     }
   },
   "cli": {
-    "analytics": "2dea100d-e8da-4e5d-8006-341eb86850ab"
+    "analytics": "33be9321-4652-411a-b091-dd3e015b8d9e"
   }
 }

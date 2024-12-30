@@ -5,7 +5,7 @@ const e = require('express');
 
 class AnalizadorLexico{
     constructor(entrada){
-        //this.archivo = archivo;
+
         this.tokens = [];
         this.Token = [];
         this.errores = [];
@@ -27,10 +27,7 @@ class AnalizadorLexico{
         //leer un archivo de tipo json
         
         const tokens = this.analizarTexto(this.entrada);
-        //let misLexicos = new Lexico(this.Token);//creando mis lexemas
-        //misLexicos.mostrarLexico();
-        //this.misErrores = new Error(this.errores);//creando mis errores
-        //this.extraerConfiguraciones(entrada);
+       
         console.log("Analisis terminado");  
     }
 

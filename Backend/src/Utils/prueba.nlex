@@ -1,0 +1,33 @@
+Operaciones = [
+{"operacion": "multiplicacion", "nombre": "operacion2", "valor1": 2.3,"valor2": [{"operacion": "seno", "valor1": 90}]},
+
+{"operacion": "suma", "nombre": "operacion3", "valor1": 2.3,"valor2": [{"operacion": "multiplicacion", "valor1": 10, "valor2": [{"operacion": "raiz", "valor1": 10, "valor2": 2 }]}]},
+
+]
+
+ConfiguracionesLex = [
+    fondo: "#ffff33",
+    fuente: "#000000",
+    forma: "circle",
+    tipoFuente: "Times-Roman"
+]
+
+ConfiguracionesParser = [
+    fondo: "#F3FF00",
+    fuente: "#000000",
+    forma: "box",
+    tipoFuente: "Arial"
+]
+
+/* Comentario simple
+   Comentario de
+   múltiple línea */
+
+imprimir("Lenguajes Formales y de Programación")
+conteo()
+promedio("suma")
+max("multiplicacion")
+min("raiz")
+generarReporte("tokens")
+generarReporte("errores","201700761")
+generarReporte("árbol", "Derivación")

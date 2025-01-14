@@ -1,5 +1,7 @@
-# LFP_VD_2024_Proyecto2_3160499720903
+# LFP_VD_2024_Proyecto2
 Proyecto con el objetivo de crear una herramienta capaz de reconocer un lenguaje por medio de un analizador lexico que cumpla con las reglas establecidas, manejando la lectura y escritura de archivos, implementando un analizador sintactico que permita la ejecucion de instrucciones utilizando una gramatica libre de contexto.
+
+Obtuve como nota el 92% del proyecto 2 (remonte y gane el curso jaskja)
 
 ### OBJETIVO ESPECÍFICOS 
 

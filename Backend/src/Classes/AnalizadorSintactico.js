@@ -43,7 +43,7 @@ class AnalizadorSintactico{
     }
 
     analizarOperacion() { //Metodo para analizar las operaciones del archivo
-        this.consumir("IGUAL");
+        this.consumir("IGUAL"); //Se consume el token de tipo IGUAL 
         this.consumir("CORCHETE_ABRE");
         this.operacion();
         this.consumir("CORCHETE_CIERRA");
@@ -208,7 +208,7 @@ class AnalizadorSintactico{
                 const creadorGrafica = new CrearGraficas(operaciones, configuracionesLex); // Crear objeto de la clase CrearGraficas
                 guardarNombre = guardarNombre.substring(1, guardarNombre.length - 1); //Se obtiene el nombre del archivo a guardar
         
-                let dotname = guardarNombre + ".dot";
+                let dotname = guardarNombre + ".dot"; // Nombre del archivo DOT
                 let pngname = guardarNombre + ".png";
                 creadorGrafica.generarImagen(dotname, pngname);
         ////////////////////////7

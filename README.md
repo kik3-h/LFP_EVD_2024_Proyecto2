@@ -91,3 +91,7 @@ recibirán entregas después de la fecha y hora establecida.
 <Termino> ::= <Factor> | <Factor> '*' <Termino> | <Factor> '/' <Termino>
 <Factor> ::= NUMERO | IDENTIFICADOR | '(' <Expresion> ')' | FUNCION '(' <Expresion> ')'
 <FUNCION> ::= "suma" | "resta" | "multiplicacion" | "division" | "potencia" | "raiz" | ...
+
+
+### SE OBTUVO UNA NOTA DEL 92%, APROBANDO EL CURSO CON UNA NOTA GENERAL DE 75 PTS SOBRE 100
+jajajs si se gano y se remonto uwu :3
